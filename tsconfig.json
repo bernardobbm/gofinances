@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"strict": true
+		"strict": true,
+		"typeRoots": ["styled.d.ts"]
 	},
 	"extends": "expo/tsconfig.base"
 }
