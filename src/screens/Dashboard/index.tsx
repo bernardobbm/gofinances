@@ -1,8 +1,11 @@
+import { ViewProps } from 'react-native';
 import { Container, Title } from './styles';
 
-export function Dashboard() {
+interface DashboardProps extends ViewProps {}
+
+export function Dashboard({ ...rest }: DashboardProps) {
 	return (
-		<Container>
+		<Container {...rest}>
 			<Title>Dashboard</Title>
 		</Container>
 	);
