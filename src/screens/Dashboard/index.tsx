@@ -1,4 +1,5 @@
 import { ViewProps } from 'react-native'
+
 import {
   Container,
   Header,
@@ -8,6 +9,7 @@ import {
   UserGreeting,
   UserName,
   UserWrapper,
+  Icon,
 } from './styles'
 
 type DashboardProps = ViewProps
@@ -28,6 +30,8 @@ export function Dashboard({ ...rest }: DashboardProps) {
               <UserName>Bernamassa</UserName>
             </User>
           </UserInfo>
+
+          <Icon name="power" />
         </UserWrapper>
       </Header>
     </Container>
