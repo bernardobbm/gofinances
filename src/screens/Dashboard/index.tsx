@@ -10,7 +10,9 @@ import {
   UserName,
   UserWrapper,
   Icon,
+  HighlightCards,
 } from './styles'
+import { HighlightCard } from '../../components/HighlightCard'
 
 type DashboardProps = ViewProps
 
@@ -34,6 +36,13 @@ export function Dashboard({ ...rest }: DashboardProps) {
           <Icon name="power" />
         </UserWrapper>
       </Header>
+
+      <HighlightCards>
+        <HighlightCard />
+        <HighlightCard />
+        <HighlightCard />
+        <HighlightCard />
+      </HighlightCards>
     </Container>
   )
 }
