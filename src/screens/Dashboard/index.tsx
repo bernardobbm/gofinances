@@ -11,8 +11,12 @@ import {
   UserWrapper,
   Icon,
   HighlightCards,
+  Transactions,
+  Title,
 } from './styles'
+
 import { HighlightCard } from '../../components/HighlightCard'
+import { TransactionCard } from '../../components/TransactionCard'
 
 type DashboardProps = ViewProps
 
@@ -57,6 +61,12 @@ export function Dashboard({ ...rest }: DashboardProps) {
           lastTransaction="01 à 16 de abril"
         />
       </HighlightCards>
+
+      <Transactions>
+        <Title>Listagem</Title>
+
+        <TransactionCard />
+      </Transactions>
     </Container>
   )
 }
