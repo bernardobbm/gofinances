@@ -24,6 +24,7 @@ type DashboardProps = ViewProps
 export function Dashboard({ ...rest }: DashboardProps) {
   const data = [
     {
+      type: 'positive',
       title: 'Desenvolvimento de Site',
       amount: 'R$ 12.000,00',
       date: '13/04/2020',
@@ -33,21 +34,23 @@ export function Dashboard({ ...rest }: DashboardProps) {
       },
     },
     {
-      title: 'Desenvolvimento de Site',
-      amount: 'R$ 12.000,00',
-      date: '13/04/2020',
+      type: 'negative',
+      title: 'Hamburgueria Pizzy',
+      amount: 'R$ 59,00',
+      date: '10/04/2020',
       category: {
-        name: 'Vendas',
-        icon: 'dollar-sign',
+        name: 'Alimentação',
+        icon: 'coffee',
       },
     },
     {
-      title: 'Desenvolvimento de Site',
-      amount: 'R$ 12.000,00',
-      date: '13/04/2020',
+      type: 'negative',
+      title: 'Aluguel do Apartamento',
+      amount: 'R$ 1.200,00',
+      date: '10/04/2020',
       category: {
-        name: 'Vendas',
-        icon: 'dollar-sign',
+        name: 'Casa',
+        icon: 'shopping-bag',
       },
     },
   ]
