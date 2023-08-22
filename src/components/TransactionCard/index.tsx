@@ -9,21 +9,37 @@ import {
   Date,
 } from './styles'
 
-export function TransactionCard() {
+interface Category {
+  name: string
+  icon: string
+}
+
+interface TransactionCardProps {
+  data: {
+    title: string
+    amount: string
+    category: Category
+    date: string
+  }
+}
+
+export function TransactionCard({ data }: TransactionCardProps) {
+  const { title, amount, category, date } = data
+
   return (
     <Container>
-      <Title>Desenvolvimento de Site</Title>
+      <Title>{title}</Title>
 
-      <Amount>R$ 12.000,00</Amount>
+      <Amount>{amount}</Amount>
 
       <Footer>
         <Category>
-          <Icon name="dollar-sign" />
+          <Icon name={category.icon} />
 
-          <CategoryName>Vendas</CategoryName>
+          <CategoryName>{category.name}</CategoryName>
         </Category>
 
-        <Date>13/04/2020</Date>
+        <Date>{date}</Date>
       </Footer>
     </Container>
   )
