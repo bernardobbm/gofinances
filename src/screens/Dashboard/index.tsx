@@ -17,13 +17,21 @@ import {
 } from './styles'
 
 import { HighlightCard } from '../../components/HighlightCard'
-import { TransactionCard } from '../../components/TransactionCard'
+import {
+  TransactionCard,
+  TransactionCardDataProps,
+} from '../../components/TransactionCard'
+
+export interface DataListProps extends TransactionCardDataProps {
+  id: string
+}
 
 type DashboardProps = ViewProps
 
 export function Dashboard({ ...rest }: DashboardProps) {
-  const data = [
+  const data: DataListProps[] = [
     {
+      id: '1',
       type: 'positive',
       title: 'Desenvolvimento de Site',
       amount: 'R$ 12.000,00',
@@ -34,6 +42,7 @@ export function Dashboard({ ...rest }: DashboardProps) {
       },
     },
     {
+      id: '2',
       type: 'negative',
       title: 'Hamburgueria Pizzy',
       amount: 'R$ 59,00',
@@ -44,6 +53,7 @@ export function Dashboard({ ...rest }: DashboardProps) {
       },
     },
     {
+      id: '3',
       type: 'negative',
       title: 'Aluguel do Apartamento',
       amount: 'R$ 1.200,00',
@@ -101,8 +111,8 @@ export function Dashboard({ ...rest }: DashboardProps) {
 
         <TransactionList
           data={data}
+          keyExtractor={(item) => item.id}
           renderItem={({ item }) => <TransactionCard data={item} />}
-          showsVerticalScrollIndicator={false}
         />
       </Transactions>
     </Container>
