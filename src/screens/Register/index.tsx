@@ -1,7 +1,8 @@
 import { ViewProps } from 'react-native'
-import { Container, Header, Title, Form } from './styles'
+import { Container, Header, Title, Form, Fields } from './styles'
 
 import { Input } from '../../components/Form/Input'
+import { Button } from '../../components/Form/Button'
 
 type RegisterProps = ViewProps
 
@@ -13,8 +14,12 @@ export function Register({ ...rest }: RegisterProps) {
       </Header>
 
       <Form>
-        <Input placeholder="Nome" />
-        <Input placeholder="Preço" />
+        <Fields>
+          <Input placeholder="Nome" />
+          <Input placeholder="Preço" />
+        </Fields>
+
+        <Button title="Enviar" />
       </Form>
     </Container>
   )
