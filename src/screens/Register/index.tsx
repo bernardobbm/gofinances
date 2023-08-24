@@ -12,6 +12,7 @@ import { Input } from '../../components/Form/Input'
 import { Button } from '../../components/Form/Button'
 import { TransactionTypeButton } from '../../components/Form/TransactionTypeButton'
 import { useState } from 'react'
+import { CategorySelect } from '../../components/Form/CategorySelect'
 
 type RegisterProps = ViewProps
 
@@ -48,6 +49,8 @@ export function Register({ ...rest }: RegisterProps) {
               onPress={() => handleTransactionTypeSelect('down')}
             />
           </TransactionTypes>
+
+          <CategorySelect title="Categoria" />
         </Fields>
 
         <Button title="Enviar" />
